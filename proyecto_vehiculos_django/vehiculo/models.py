@@ -24,3 +24,8 @@ class Vehiculo(models.Model):
 
     def __str__(self):
         return f"{self.marca} {self.modelo} - {self.categoria}"
+    
+class Meta:
+    permissions = [
+        ("visualizar_catalogo", "Can view catalogo de vehiculos"),
+    ]
